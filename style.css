@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    perspective: 1000px;
+}
+
+.modal {
+    min-width: 30vh;
+    min-height: 25vh;
+    font-family: 'Press Start 2P';
+    font-size: 24px;
+    color: rgba(111, 0, 0);
+    line-height: 1.6;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px black;
+    display: flex;
+    flex-direction: row;
+    background: rgba(197, 0, 0, 0.3);
+    padding: 10px 30px 30px 40px;
+    border: 5px rgba(111, 0, 0) solid;
+    border-radius: 2px;
+    box-shadow:
+        inset 1px 1px 5px rgba(0, 0, 0, 0.9),
+        inset 1px -1px 5px rgba(0, 0, 0, 0.3),
+        1px -1px 5px rgba(0, 0, 0, 0.7);
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+#checkbox-label {
+    position: absolute;
+    bottom: 2vh;
+    width: 100px;
+    left: 75vh;
+    height: 250px;
+    cursor: pointer;
+}
+
+#checkbox:checked~.modal {
+    transform: scale(1) rotate(2deg) rotateY(10deg);
+}
